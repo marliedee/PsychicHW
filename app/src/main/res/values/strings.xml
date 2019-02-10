@@ -6,4 +6,6 @@
     <string name="selected">Selected</string>
     <string name="welcome_psychic">Welcome Psychic!</string>
     <string name="the_results">The Results!</string>
+    <string name="winner">You Won!!</string>
+    <string name="wrong_guess">Sorry, wrong guess.</string>
 </resources>
