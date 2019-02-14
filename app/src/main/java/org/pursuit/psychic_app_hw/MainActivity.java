@@ -22,6 +22,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements FragmentInterface{
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +35,10 @@ public class MainActivity extends AppCompatActivity implements FragmentInterface
         fragmentTransaction.commit();
 
     }
-    @Override
-    public void startChoice(){
+
+    public void startChoice() {
+
 
     }
-//
-//    public void startChoice() {
-//        Intent intent = new Intent(getApplicationContext(), ResultFragment.class);
-//    }
 
 }

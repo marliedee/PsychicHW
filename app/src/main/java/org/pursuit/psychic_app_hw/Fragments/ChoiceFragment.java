@@ -17,7 +17,11 @@ import org.pursuit.psychic_app_hw.R;
 
 public class ChoiceFragment extends Fragment {
 private View rootview;
-    private ImageButton imageView;
+    private ImageButton pinkdiamond;
+    private ImageButton whitediamond;
+    private ImageButton blackdiamond;
+    private ImageButton bluediamond;
+
 
     public ChoiceFragment() {
     }
@@ -43,10 +47,9 @@ private View rootview;
 
 
     private void startChoice() {
-        ImageButton imageView;
-        imageView = rootview.findViewById(R.id.ib_diamond);
+        pinkdiamond = rootview.findViewById(R.id.ib_diamond);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        pinkdiamond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ResultFragment resultFragment = ResultFragment.newInstance();
@@ -58,6 +61,47 @@ private View rootview;
             }
         });
 
+        bluediamond = rootview.findViewById(R.id.ib_diamond2);
+
+        bluediamond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ResultFragment resultFragment = ResultFragment.newInstance();
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
+                ft.commit();
+
+            }
+        });
+
+        whitediamond = rootview.findViewById(R.id.ib_diamond3);
+
+        whitediamond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ResultFragment resultFragment = ResultFragment.newInstance();
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
+                ft.commit();
+
+            }
+        });
+
+        blackdiamond = rootview.findViewById(R.id.ib_diamond4);
+
+        blackdiamond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ResultFragment resultFragment = ResultFragment.newInstance();
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
+                ft.commit();
+
+            }
+        });
 
     }
 }
