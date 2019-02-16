@@ -40,7 +40,6 @@ private View rootview;
 
         Bundle bundle = this.getArguments();
         int position = bundle.getInt("selected_image");
-        Toast.makeText(getActivity(), ""+ position, Toast.LENGTH_SHORT).show();
 
         rootview = inflater.inflate(R.layout.fragment_choice, container, false);
         startChoice();

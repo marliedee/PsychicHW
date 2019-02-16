@@ -32,7 +32,6 @@ public class ChoiceFragmentThree extends Fragment {
                              Bundle savedInstanceState) {
         Bundle bundle = this.getArguments();
         int position = bundle.getInt("selected_image_three");
-        Toast.makeText(getActivity(), ""+ position, Toast.LENGTH_LONG).show();
 
         rootview = inflater.inflate(R.layout.fragment_choice_fragment_three, container, false);
         startChoice();

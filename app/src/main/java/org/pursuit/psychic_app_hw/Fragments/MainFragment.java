@@ -46,7 +46,6 @@ public class MainFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
-//                Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
 
                 if (item.equals("Diamonds")) {
                     ChoiceFragment choiceFragment = ChoiceFragment.newInstance();

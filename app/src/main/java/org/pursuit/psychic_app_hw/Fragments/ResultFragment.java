@@ -3,6 +3,7 @@ package org.pursuit.psychic_app_hw.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.pursuit.psychic_app_hw.R;
+import org.pursuit.psychic_app_hw.model.Guess;
+import org.pursuit.psychic_app_hw.model.GuessDataBaseHelper;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -39,6 +43,8 @@ public class ResultFragment extends Fragment {
     }
 
     private void startChoice() {
+        GuessDataBaseHelper guessDataBaseHelper = new GuessDataBaseHelper(getContext(), GuessDataBaseHelper.DATABASE_NAME, null, 1);
+        List<Guess> newGuess = guessDataBaseHelper.getGuessList();
 
         imageView = rootView.findViewById(R.id.result_image);
         int[] images = {R.drawable.diamond, R.drawable.blackdiamond, R.drawable.bluediamond, R.drawable.pinkdiamond};
@@ -47,12 +53,19 @@ public class ResultFragment extends Fragment {
         imageView.setImageResource(images[result]);
         textView = rootView.findViewById(R.id.frag_results_one);
 
-//        if (rand.nextInt(images[result]) == R.id.ib_diamond) {
-//            textView.setText(R.string.winner);
-//        }
-//        if (rand.nextInt(images[result]) != R.id.ib_diamond) {
-//            textView.setText(R.string.wrong_guess);
-//        }
+        if (images[result] == R.drawable.diamond) {
+            textView.setText(R.string.winner);
+            for (Guess g : newGuess) {
+                Log.d("Guess ", "" + g.getRight());
+
+            }
+        } else if (images[result] != R.drawable.diamond) {
+            textView.setText(R.string.wrong_guess);
+            for (Guess g : newGuess) {
+                Log.d("Guess ", " " + g.getWrong());
+
+            }
+        }
 
     }
 }
