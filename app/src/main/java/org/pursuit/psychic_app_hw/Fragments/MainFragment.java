@@ -38,7 +38,7 @@ public class MainFragment extends Fragment {
         textView = rootView.findViewById(R.id.frag_choice_one);
         final Spinner spinner = rootView.findViewById(R.id.choice_spinner);
         final List<String> categories = new ArrayList<>();
-        categories.add("-----SELECT-----");
+        categories.add("-----SELECT TO BEGIN-----");
         categories.add("Gold");
         categories.add("Diamonds");
         categories.add("Pearls");

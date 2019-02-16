@@ -8,4 +8,5 @@
     <string name="the_results">The Results!</string>
     <string name="winner">You Won!!</string>
     <string name="wrong_guess">Sorry, wrong guess.</string>
+    <string name="welcome_select_above_to_begin">Welcome! Select Above to Begin...</string>
 </resources>

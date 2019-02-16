@@ -11,9 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.pursuit.psychic_app_hw.R;
+
+import java.util.Random;
 
 public class ChoiceFragment extends Fragment {
 private View rootview;

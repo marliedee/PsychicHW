@@ -45,7 +45,7 @@ public class ChoiceFragmentThree extends Fragment {
         blackgold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentThree resultFragment = ResultFragmentThree.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
@@ -59,7 +59,7 @@ public class ChoiceFragmentThree extends Fragment {
         rosegold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentThree resultFragment = ResultFragmentThree.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
@@ -73,7 +73,7 @@ public class ChoiceFragmentThree extends Fragment {
         platnium.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentThree resultFragment = ResultFragmentThree.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
@@ -87,7 +87,7 @@ public class ChoiceFragmentThree extends Fragment {
         gold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentThree resultFragment = ResultFragmentThree.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);

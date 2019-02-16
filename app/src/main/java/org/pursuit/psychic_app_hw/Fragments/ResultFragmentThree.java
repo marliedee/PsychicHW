@@ -13,39 +13,38 @@ import org.pursuit.psychic_app_hw.R;
 
 import java.util.Random;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class ResultFragment extends Fragment {
+public class ResultFragmentThree extends Fragment {
     private View rootView;
     private ImageView imageView;
     private TextView textView;
 
-
-    public ResultFragment() {
-        // Required empty public constructor
+    public ResultFragmentThree() {
     }
 
-    public static ResultFragment newInstance() {
-        return new ResultFragment();
+    public static ResultFragmentThree newInstance() {
+        return new ResultFragmentThree();
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_result, container, false);
+        rootView = inflater.inflate(R.layout.fragment_result_fragment_three, container, false);
         startChoice();
         return rootView;
     }
 
     private void startChoice() {
 
-        imageView = rootView.findViewById(R.id.result_image);
-        int[] images = {R.drawable.diamond, R.drawable.blackdiamond, R.drawable.bluediamond, R.drawable.pinkdiamond};
+        imageView = rootView.findViewById(R.id.result_image_three);
+        int[] images = {R.drawable.gold, R.drawable.platinumgold, R.drawable.blackgold, R.drawable.rosegold};
         Random rand = new Random();
         int result = rand.nextInt(images.length);
         imageView.setImageResource(images[result]);
-        textView = rootView.findViewById(R.id.frag_results_one);
+        textView = rootView.findViewById(R.id.frag_results_three);
+
+    }
+}
 
 //        if (rand.nextInt(images[result]) == R.id.ib_diamond) {
 //            textView.setText(R.string.winner);
@@ -54,5 +53,5 @@ public class ResultFragment extends Fragment {
 //            textView.setText(R.string.wrong_guess);
 //        }
 
-    }
-}
+
+

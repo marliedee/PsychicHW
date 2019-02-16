@@ -45,7 +45,7 @@ public class ChoiceFragmentTwo extends Fragment {
         whitepearls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentTwo resultFragment = ResultFragmentTwo.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
@@ -59,7 +59,7 @@ public class ChoiceFragmentTwo extends Fragment {
         bluepearls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentTwo resultFragment = ResultFragmentTwo.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
@@ -73,7 +73,7 @@ public class ChoiceFragmentTwo extends Fragment {
         blackpearls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentTwo resultFragment = ResultFragmentTwo.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
@@ -87,7 +87,7 @@ public class ChoiceFragmentTwo extends Fragment {
         pinkpearls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultFragment resultFragment = ResultFragment.newInstance();
+                ResultFragmentTwo resultFragment = ResultFragmentTwo.newInstance();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, resultFragment).addToBackStack(null);
