@@ -18,6 +18,8 @@ import java.util.List;
 import java.util.Random;
 
 public class ResultFragmentThree extends Fragment {
+    public static final String GUESS_WRONG = "Guess W";
+    public static final String GUESS_RIGHT = "Guess R";
     private View rootView;
     private ImageView imageView;
     private TextView textView;
@@ -52,13 +54,13 @@ public class ResultFragmentThree extends Fragment {
         if (images[result] == R.drawable.rosegold) {
             textView.setText(R.string.winner);
             for (Guess g : newGuess) {
-                Log.d("Guess ", "" + g.getRight());
+                Log.d(GUESS_RIGHT, "Right" + g.getRight());
 
             }
         } else if (images[result] != R.drawable.rosegold) {
             textView.setText(R.string.wrong_guess);
             for (Guess g : newGuess) {
-                Log.d("Guess ", " " + g.getWrong());
+                Log.d(GUESS_WRONG, "Wrong" + g.getWrong());
 
             }
         }

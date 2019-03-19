@@ -17,9 +17,6 @@ import org.pursuit.psychic_app_hw.model.GuessDataBaseHelper;
 import java.util.List;
 import java.util.Random;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ResultFragmentTwo extends Fragment {
     private View rootView;
     private ImageView imageView;
@@ -55,13 +52,13 @@ public class ResultFragmentTwo extends Fragment {
         if (images[result] == R.drawable.pinkpearls) {
             textView.setText(R.string.winner);
             for (Guess g : newGuess) {
-                Log.d("Guess ", "" + g.getRight());
+                Log.d("Guess ", "Right" + g.getRight());
 
             }
         } else if (images[result] != R.drawable.pinkpearls) {
             textView.setText(R.string.wrong_guess);
             for (Guess g : newGuess) {
-                Log.d("Guess ", " " + g.getWrong());
+                Log.d("Guess ", "Wrong" + g.getWrong());
 
             }
         }

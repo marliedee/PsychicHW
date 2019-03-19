@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class GuessDataBaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME = "psychic";
 
     public GuessDataBaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DATABASE_NAME, factory, 1);
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
@@ -31,7 +32,7 @@ public class GuessDataBaseHelper extends SQLiteOpenHelper {
         //not in use.
     }
 
-    public void addGuess(Guess guess) {
+    public boolean addGuess(Guess guess) {
         Cursor cursor = getReadableDatabase().rawQuery(
                 "SELECT * FROM " + TABLE_NAME + " WHERE right = '" + guess.getRight() +
                         "' AND wrong = '" + guess.getWrong() +
@@ -43,7 +44,8 @@ public class GuessDataBaseHelper extends SQLiteOpenHelper {
                     guess.getWrong() + "',");
         }
         cursor.close();
-    }
+    return true;
+}
 
     public List<Guess> getGuessList() {
         List<Guess> guessList = new ArrayList<>();
